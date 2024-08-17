@@ -5,19 +5,25 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    color: beige;
     background-color: #402E7A;
     background-size: cover; /* Ensures the image covers the viewport */
     background-repeat: no-repeat;
-    background-position: top;
-    transition: background-image 0.5s ease;
+    background-position: center center; /* Default position before parallax effect */
+    transition: background-image 1s ease-in;
+    background-attachment: fixed; /* Ensures the background doesn't scroll with content */
 }
+
+
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10vh;
-    background-color: #240750;
+    background-color: #2407502b;
 }
 
 header nav {
@@ -41,4 +47,12 @@ header button {
 
 header button:hover {
     opacity: 0.7; /* Slightly different opacity for better visibility */
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
 }
